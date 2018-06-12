@@ -68,16 +68,8 @@ class GraphDialog(QDialog):
         self.canvas.draw() 
         self.xStart+=1
         self.yRandom=self.yStart*round(10*random.random(),3)
-        
-        #dataIn=open('C:\\Users\\lab\\Desktop\\xy.txt','a')
-        #dataIn.write('{},{}\n'.format(str(self.xStart),str(self.yRandom)))
-        #dataIn.close()
-        
-        #self.timer=core.QTimer()
-        #self.timer.timeout.connect(self.plot2)
-        #self.timer.start(1000)
+       
         self.animate(1)
-        #ani=animation.FuncAnimation(self.fig, self.animate, interval=1000)
     def animate(self,i):
         self.axes.set_title('PyQt Matplotlib Example')
         data=open('C:\\Users\\lab\\Desktop\\xy.txt','r').read()
